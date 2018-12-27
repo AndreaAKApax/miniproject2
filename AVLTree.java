@@ -575,7 +575,7 @@ public class AVLTree<E extends Comparable<E>> {
          */
         public boolean isBalanced() {       	
             int bf = this.getBalanceFactor();
-            if (Math.abs(bf) <= 1 || this.left.isBalanced() || this.right.isBalanced())
+            if (Math.abs(bf) <= 1 && this.left.isBalanced() && this.right.isBalanced())
             	return true;
             else
             	return false;
